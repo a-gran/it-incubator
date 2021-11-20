@@ -1,0 +1,167 @@
+<script>
+    //!!!Выполняем с помощью цикла "for" и метода массивов "map".
+
+    //1.Преобразовать массив чисел в массив строк.
+    // Используем метод Number.prototype.toString().
+    // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
+
+    let arrNum = [1, 2, 3, 4];
+    let arrStr = [];
+
+    // Код пишем здесь!!!
+
+    console.log(arrStr);
+    
+    // 2.Преобразовать массив строк в массив строк с верхним регистром.
+    // Используем метод String.prototype.toUpperCase().
+    //https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+    let strings = ['age', 'name', 'table'];
+    let newStrings = [];
+
+    // Код пишем здесь!!!
+
+    console.log(newStrings);
+
+    // 3.Преобразовать массив строк в массив, у которого каждый элемент будет начинаться с заглавной буквой.
+    // Используем метод String.prototype.substring().
+    // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/substring
+
+    let names = ['andrey', 'vasia', 'kirill'];
+    let namesCapLetter = [];
+
+    // Код пишем здесь!!!
+
+    console.log(namesCapLetter);
+
+    // 4.Преобразовать массив строк в массив объектов:
+    // [{ name: ‘Andrey’ }, { name: ‘Vasja’ },{ name: ‘Kirill’ }].
+
+    let myNames = ['Andrey', 'Vasja', 'Kirill'];
+    let persons = [];
+
+    // Код пишем здесь!!!
+    
+    console.log(persons);
+
+    // 5.Есть массив имен и есть массив возрастов.
+    // Каждый индекс имени совпадает с индексом возраста.
+    // Cоздать новый массив, каждый элемент которого будет объектом типа {name: "Alex", age: 18}. 
+    // Использовать второй параметр колбэка, передаваемого методу "map".
+
+    let friendsNames = ['Andrey', 'Vasja', 'Kirill'];
+    let friendsAges = [23, 30, 25];
+    let friends = [];
+
+    // Код пишем здесь!!!
+
+    console.log(friends);
+
+    // 6.Преобразовать массив объектов в массив чисел, элементами которого
+    // будут числа (значения возрастов из объектов).
+
+    let students = [{name: 'Alex', age: 23}, {name: 'John', age: 32}, {name:'Helga',age: 20}]
+    let ages = [];
+
+    // Код пишем здесь!!!
+    
+    console.log(ages);
+
+    // 7.Требуется преобразовать исходный массив в массив, элементы которого будут: 
+    // - если исходный элемент  - число, то новый элемент будет объектом в виде {age: 23}; 
+    // - если строка, то в новом массиве элемент будет той же строкой в верхнем регистре;
+    // - в остальных случаях элементы преобразуются в строку ‘not a number or a string’.
+
+    let oldArray = [23, 5, null, true, 'Bob', [], {}];
+    let newArray = [];
+
+    // Код пишем здесь!!!
+
+    console.log(newArray);
+
+    // !!!Используем метод массивов 'filter'!!!
+
+    // 8. Создайте новый массив с элементами из исходного массива, которые меньше 2. 
+    
+    let myNumbers = [1, 2, 3, 4];
+    let myBigNumbers = [];
+
+    // Код пишем здесь!!!
+
+    console.log(myBigNumbers);
+
+    // 9.Создайте новый массив совершеннолетних пользователей.
+
+    let users = [
+       { age: 11, name: 'Vasja' },
+       { age: 13, name: 'Ivan' },
+       { age: 18, name: 'Katya' },
+       { age: 23, name: 'Andrey' }
+    ];
+    let oldUsers = [];
+
+    // Код пишем здесь!!!
+
+   console.log(oldUsers);
+
+    // 10.Удалите из исходного массива слова, содержащие более 5 символов.
+    let words = ['run', 'execution', 'let', 'function', 'const'];
+    let shortWords = [];
+
+    // Код пишем здесь!!!
+
+    console.log(shortWords);
+    console.log(words);
+
+
+    // 11.Отфильтровать исходный массив таким образом, чтобы в нем были только строки и числа.
+
+    let arr = ['function', 23, null, 'object', 55, 'null', true, undefined]
+    let filtredArr = [];
+
+    // Код пишем здесь!!!
+
+    console.log(filtredArr)
+
+    // 12. Удалите из исходного массива чётные числа
+
+    let randomNumbers = [1, 34, 32, 456, 47, 97];
+    let oddNumbers = [];
+
+    // Код пишем здесь!!!
+
+    console.log(oddNumbers);
+
+    // 13. Найдите сумму всех элементов массива.
+    // Используйте метод массивов 'reduce'.
+    // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+
+    let arrTоSum = [1, 2, 3, 4, 5, 6];
+    let sum;
+
+    // Код пишем здесь!!!
+
+    console.log(sum);
+
+    // 14.Создайте функцию "average", которая    принимает массив из чисел и возвращает среднее арифметическое значение элементов массива.
+
+    let array = [1, 2, 3, 4, 5, 6];
+    let average = () => {};
+        
+    console.log(average(array));
+
+    //15.Дан произвольный массив из чисел. Напишите функцию, которая возвращает максимальное значение из массива. Подумайте, каким ещё способом это мложно сделать?
+
+    // Всё сделал? Красавчик! :))))) 
+
+
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,168 @@
+<script>
+    1.
+    const student = {
+        name: 'Alex',
+        'age': 18,
+        isStudent: true,
+        friends: ['Nick', 'John'],
+        greeting: function () {
+            console.log("I'm a function!");
+        }
+    };
+    console.log(student);
+
+    2.
+    const dotNotation = student.name;
+    console.log(dotNotation);
+    const bracketsNotation = student['name'];
+    console.log(bracketsNotation);
+    console.log(student.greeting());
+
+    3.
+    student.gender = 'male';
+    const newProp = 'isMarried';
+    student[newProp] = false;
+    console.log(student);
+
+    4.
+    const first = { a: 4, b: 'yo!' };
+    const second = first;
+    second.b = 'hey!';
+    console.log(first);
+
+    5.
+    const copyFirst = { ...first };
+    copyFirst.b = 'yo!';
+    console.log(copyFirst);
+
+    const secStudent = { ...student };
+    secStudent.friends.push('Helga');
+    console.log(secStudent);
+    console.log(student);
+
+    6.
+    const deepCopyStudent = { ...student, friends: [...student.friends] };
+    deepCopyStudent.friends.pop();
+    console.log(deepCopyStudent);
+    console.log(student);
+
+    7.
+    // const stName = student.name;
+    // const stAge = student.age;
+    // const isMarried = student.isMarried;
+    // const friends = student.friends;
+
+    const { name: stName, age: stAge, isMarried: isMarried, friends } = student;
+
+    9.
+    const human = {
+        name: 'Alex',
+        'age': 18,
+        isStudent: true,
+        friends: ['Nick', 'John'],
+        greeting: function () {
+            return `My name is ${human.name}.`;
+        },
+        setPropValue: function (propName, value) {
+            human[propName] = value;
+        },
+
+    };
+    console.log(human.greeting());
+
+    10.
+    function getGreeting () {
+                return `My name is ${this.name}.`;
+            }
+    function humanCreator(name, age) {
+        return {
+            name: name,
+            age: age,
+            greeting: getGreeting,
+            setPropValue: function (propName, value) {
+                this[propName] = value;
+            }
+        }
+    };
+    const newHuman = humanCreator('Nick', 22);
+    const oldHuman = humanCreator('John', 100);
+    console.log(newHuman.greeting());
+    console.log(oldHuman.greeting());
+
+    11.
+    function Human(name, age) {
+        this.name = name, 
+        this.age = age
+        // this.greeting = function () {
+        //         return `My name is ${this.name}.`;
+        //     }
+    };
+    Human.prototype.greeting = function () {
+                return `My name is ${this.name}.`;
+            };
+    Human.prototype.setPropValue = function (propName, value) {
+            human[propName] = value;
+        };       
+
+    const den = new Human('Den', 22);
+    console.log(den.greeting());
+
+    12.
+    const arr = []; // new Array();
+    const obj = {}; // new Object();
+
+    13.
+    console.log(den.hasOwnProperty('name'))
+    console.log(den.hasOwnProperty('greeting'))
+
+    for(let prop in den){
+        console.log(den[prop]);
+        console.log(prop)
+    }
+
+    const ownProps = Object.keys(den);
+    console.log(ownProps);
+
+    14.
+    class HumanSuper {
+        constructor(n, a){
+            this.name = n,
+            this.age = a
+        }
+        greeting = ()=> { //стрелочную можно, но в некоторых местах будет работать по-другому
+            console.log(this.name);
+        };
+    }
+
+    const men = new HumanSuper('Ivan', 23);
+
+    15.
+
+    class Person extends HumanSuper {
+        constructor(name, age, gender){
+            super(name, age);
+            this.gender = gender;
+        }
+        callParent(){
+            this.greeting()
+        }
+
+    };
+
+    const anton = new Person('Антон', 23, 'male');
+    anton.callParent();
+
+
+
+
+
+   
+    
+
+
+
+
+
+
+
+</script>
